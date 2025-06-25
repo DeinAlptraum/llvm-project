@@ -10,6 +10,7 @@ on:
       - 'main'
     paths:
       - 'clang/bindings/python/**'
+      - 'clang/test/bindings/python/**'
       - 'clang/tools/libclang/**'
       - 'clang/CMakeList.txt'
       - '.github/workflows/libclang-python-tests.yml'
@@ -17,6 +18,7 @@ on:
   pull_request:
     paths:
       - 'clang/bindings/python/**'
+      - 'clang/test/bindings/python/**'
       - 'clang/tools/libclang/**'
       - 'clang/CMakeList.txt'
       - '.github/workflows/libclang-python-tests.yml'
