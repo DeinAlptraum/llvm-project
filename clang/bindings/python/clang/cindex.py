@@ -3052,6 +3052,16 @@ SPELLING_CACHE = {
 }
 
 
+# Converting the new enum names (full upper-case, underscore separated)
+# to the old ones (separated by capitalization), e.g. RESULT_TYPE -> ResultType
+def _kind_to_old_name(kind: BaseEnumeration):
+    # Remove underscores
+    components = kind.name.split("_")
+    # Upper-camel case each split component
+    components = [component.lower().capitalize() for component in components]
+    return "".join(components)
+
+
 class CompletionChunk:
     class Kind:
         def __init__(self, name: str):
@@ -3228,7 +3238,7 @@ class CompletionString(ClangObject):
             + " || Priority: "
             + str(self.priority)
             + " || Availability: "
-            + str(self.availability)
+            + _kind_to_old_name(self.availability)
             + " || Brief comment: "
             + str(self.briefComment)
         )
