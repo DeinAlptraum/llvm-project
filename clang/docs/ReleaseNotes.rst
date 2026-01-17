@@ -65,14 +65,8 @@ Clang Python Bindings Potentially Breaking Changes
   to compare with the return values of ``CompletionString.availability``.
 - Remove ``availabilityKinds``. In this release, uses of ``availabilityKinds``
   need to be replaced by ``CompletionString.AvailabilityKind``.
-
 What's New in Clang |release|?
 ==============================
-
-C++ Language Changes
---------------------
-
-C++2c Feature Support
 ^^^^^^^^^^^^^^^^^^^^^
 
 C++23 Feature Support
