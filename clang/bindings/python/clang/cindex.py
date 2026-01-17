@@ -3246,7 +3246,7 @@ class AvailabilityKindCompat(BaseEnumeration):
 
     # Ensure AvailabilityKindCompat is comparable with AvailabilityKind
     def __eq__(self, other: object) -> bool:
-        if isinstance(other, AvailabilityKind):
+        if isinstance(other, (AvailabilityKind, AvailabilityKindCompat)):
             return self.value == other.value
         else:
             return NotImplemented
