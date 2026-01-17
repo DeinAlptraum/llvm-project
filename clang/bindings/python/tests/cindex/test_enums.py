@@ -4,7 +4,6 @@ from pathlib import Path
 from clang.cindex import (
     AccessSpecifier,
     AvailabilityKind,
-    AvailabilityKindCompat,
     BinaryOperator,
     CompletionString,
     CursorKind,
